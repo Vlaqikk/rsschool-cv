@@ -3,10 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/faviMe.svg">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>CV</title>
 </head>
 <body>
-    <p class="w">заглушка</p>
+    <div class="top-line"></div>
+    <div class="wrapper">
+        <header class="header">
+            <img src="./assets/images/pankak.png" alt="My pretty face should be here" class="header__avatar">
+            <div class="header__info-block">
+                <h1 class="header-name" id="Home">Ilinsky Vladislav</h1>
+                <h2 class="header__profession">Junior web-developer</h2>
+            </div>
+        </header>
+        <main class="content">
+            <div class="left-block">
+                <ul class="left-block__section">
+                    <li class="section__head" id="Contacts">Contacts:</li>
+                    <li>+7 (982) 507-07-79</li>
+                    <li>+7 (993) 572-86-01</li>
+                    <li>ilinskyvladislav2002@mail.ru</li>
+                    <li>@Vlaqikk</li>
+                </ul>
+                <ul class="left-block__section">
+                    <li class="section__head" id="Education">Education:</li>
+                    <li>
+                        Surgut State University,<br> Electrical Power Engineering and Electrical Engineering,<br> 2020-2024
+                    </li>
+                    <li>
+                        School 21,<br> programming school from Sberbank,<br> 2024-present
+                    </li>
+                </ul>
+                <ul class="left-block__section">
+                    <li class="section__head" id="Skills">Skills:</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>JQuery</li>
+                    <li>React</li>
+                    <li>git</li>
+                    <li>GitHub</li>
+                    <li>GitLab</li>
+                    <li>Figma</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+                <ul class="left-block__section">
+                    <li class="section__head" id="Languages">Languages:</li>
+                    <li>
+                        Russian
+                    </li>
+                    <li>
+                        English
+                    </li>
+                </ul>
+            </div>
+            <div class="right-block">
+                <div class="right-block__section">
+                    <h2 class="section__head" id="About">About me:</h2>
+                    <p class="right-block__about">
+                        I've been interested in programming all my life. For example, at school I was engaged in robotics, won prizes. When I got a little older, I began to study c#. At the university, according to the curriculum, it was necessary to work with microcontrollers.
+                    </p>
+                    <p class="right-block__about">
+                        In my first year, I became interested in web development, wrote my first html markup, and added css. I saw the first result. Yes, the site was simple, the markup was crooked in places. But I realized that it was mine. Over time, I added js to the layout. My sites have started to live. Buttons, molds, all kinds of movements. Yes! That's what I want! I like what I'm doing, because I see the result. I soon mastered Jquery. Then my eyes fell on php. Now my site interacted with the server. Beauty! And to make life a fairy tale, I studied React.
+                    </p>
+                    <p class="right-block__about">
+                        This year I graduated from university and in the future I think to connect my life with programming.
+                    </p>
+                </div>
+                <div class="right-block__section">
+                    <h2 class="section__head" id="Code">My code:</h2>
+                    <p>Heap Sort is a comparison-based sorting algorithm that transforms an array into a heap data structure. A heap is a complete binary tree where each node satisfies the heap property, meaning that the parent node is either greater than or equal to (max heap) or less than or equal to (min heap) its child nodes.</p>
+
+                    <p>The algorithm consists of two main parts:</p>
+                    <p><strong>Heapify:</strong> This function ensures that the subtree rooted at node <code>i</code> maintains the heap property. If the heap property is violated at <code>i</code>, it corrects it by swapping <code>i</code> with its largest (for max heap) or smallest (for min heap) child recursively.</p>
+                    <p><strong>Heap Sort Utilization:</strong> It first builds a max heap (for ascending order) from the input array. After building the heap, the root element (the largest) is swapped with the last element in the heap and then heapified to adjust the heap structure. This process is repeated for the remaining elements, resulting in a sorted array.</p>
+                    
+                    <p>Heap Sort has a time complexity of <code>O(n log n)</code> for all cases, making it efficient and optimal for sorting large datasets.</p>
+                    <code class="section__code">
+                        &nbsp;&nbsp;&nbsp;&nbsp;function heapSort(arr) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function heapify(arr, n, i) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let largest = i;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let left = 2 * i + 1;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let right = 2 * i + 2;<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (left < n && arr[left] > arr[largest]) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = left;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (right < n && arr[right] > arr[largest]) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;largest = right;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (largest !== i) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[arr[i], arr[largest]] = [arr[largest], arr[i]];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heapify(arr, n, largest);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function heapSortUtil(arr) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const n = arr.length;<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heapify(arr, n, i);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (let i = n - 1; i > 0; i--) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[arr[0], arr[i]] = [arr[i], arr[0]];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heapify(arr, i, 0);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heapSortUtil(arr);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;let arr = [12, 11, 13, 5, 6, 7];<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Source array:", arr);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;heapSort(arr);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;console.log("Sorted array:", arr);<br>
+                    </code>                        
+                </div>
+                <div class="right-block__section">
+                    <h2 class="section__head" id="Projects">My projects:</h2>
+                    <a href="https://github.com/Vlaqikk/wildberries-basket-L0">Shopping cart for online store</a>
+                    <a href="https://github.com/Vlaqikk/wildberries-memoCraft-L2">Meme generator</a>
+                    <a href="https://github.com/Vlaqikk/wildberries-tasks-L1">Various brain exercises</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <div class="footer__info">
+                <a href="https://rs.school/courses/javascript-ru" class="footer__logo-link"><img src="./assets/images/rs-school-logo.svg" alt="logo RSS" class="footer__logo"></a>
+                <a href="https://github.com/Vlaqikk" class="footer__git-link">my GitHub</a>
+                <p>2024</p>
+            </div>
+            <nav class="navigate">
+                <a href="#Home">Home</a>
+                <a href="#About">About me</a>
+                <a href="#Contacts">Contacts</a>
+                <a href="#Education">Education</a>
+                <a href="#Code">My code</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Languages">Languages</a>
+                <a href="#Projects">My projects</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
